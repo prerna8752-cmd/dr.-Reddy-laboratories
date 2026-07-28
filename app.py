@@ -17,7 +17,6 @@ c3.metric("Latest OPM %", f"{df['OPM_Percent'].iloc[-1]:.2f}%")
 
 # Chart 1: Sales Trend
 st.subheader("Sales Trend")
-fig, ax = plt.subplots()
 ax.plot(df["Period"],df["Sales"])
 ax.plot(df["Sales"], marker="o")
 ax.set_xlabel("Period")
@@ -26,7 +25,6 @@ st.pyplot(fig)
 
 # Chart 2: Net Profit Trend
 st.subheader("Net Profit Trend")
-fig, ax = plt.subplots()
 ax.plot(df["Net_Profit"], marker="o")
 ax.set_xlabel("Period")
 ax.set_ylabel("Net Profit")
